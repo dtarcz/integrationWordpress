@@ -2,7 +2,7 @@
 
 <div id="main">
   <div id="content">
-    <h1>Contenu Principal</h1>
+    <h1> Contenu Principal </h1>
 
 <?php $args = array('post_type' => 'post', 'category_name' => 'cat1',);
 // 2. on exécute la query
@@ -13,11 +13,11 @@ if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_po
   <h1> <?php the_title(); ?> </h1>
   <h4> Posted on <?php the_time('F jS, Y') ?> </h4>
   <p> <?php the_content(__('(plus...)')); ?> </p>
-  <hr>
+  <hr/>
 
 <?php endwhile; else:?>
 
-  <p><?php _e('Desolé il n\'y a pas d\'article qui match.'); ?></p>
+  <p> <?php _e('Desolé il n\'y a pas d\'article qui match.'); ?> </p>
 <?php endif; ?>
   </div>
 
